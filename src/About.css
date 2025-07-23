@@ -1,0 +1,27 @@
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes wakeUpArrow {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0); /* Початкове положення */
+  }
+  50% {
+    opacity: 0;
+    transform: translate(20px, -20px); /* Рухаємо вправо і вгору */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20px, -20px); /* Вспливає знизу, у напрямку вниз */
+  }
+}
+
+.hover\:animate-slide:hover .text-right {
+  animation: wakeUpArrow 0.3s ease-in-out forwards;
+}
